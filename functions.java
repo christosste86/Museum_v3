@@ -28,7 +28,6 @@ public class functions {
     }
 
     public void setRundomUsersToStatisticTable(){
-
     }
 
 }
