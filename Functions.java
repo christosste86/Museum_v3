@@ -76,5 +76,64 @@ public class Functions {
     }
 
 
+    //Getters
+    public String getFirstname() {
+        return firstname;
+    }
 
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public double getCustomerTicketPrice() {
+        return customerTicketPrice;
+    }
+
+    public DateTimeFormatter getCzDateFormat() {
+        return czDateFormat;
+    }
+
+    public Object[][] getTable() {
+        return table;
+    }
+
+    public int getTicketID() {
+        return ticketID;
+    }
+
+    public int getPaymentID() {
+        return paymentID;
+    }
+
+    public int getDateID() {
+        return dateID;
+    }
+
+    public double getTicketPrice() {
+        return ticketPrice;
+    }
+
+    public Integer getMaxTicketsPerDay() {
+        return maxTicketsPerDay;
+    }
+
+    public String[][] getRandomNames() {
+        return randomNames;
+    }
+
+    public int getStatusNameID() {
+        return statusNameID;
+    }
+
+    public int getStatusOfferID() {
+        return statusOfferID;
+    }
+
+    public Object[][] getStatuses() {
+        return statuses;
+    }
 }
