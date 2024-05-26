@@ -6,6 +6,7 @@ public class functions {
     private String firstname;
     private String lastName;
     private String status;
+    private double customerTicketPrice;
 
     //date Format
     private DateTimeFormatter czDateFormat = DateTimeFormatter.ofPattern("dd.MM.yyyy");
@@ -17,7 +18,7 @@ public class functions {
     private final int dateID = 0;
 
     //Tickets
-    private Double ticketPrice;
+    private double ticketPrice = 1000;
     private Integer maxTicketsPerDay;
 
     public void setDatesToStatisticTable() {
@@ -56,5 +57,17 @@ public class functions {
         }
         status = statuses[statusNameID][(int) Math.random() * statuses[statusNameID].length].toString();
     }
+
+    public void calculatePriceByOffer(){
+        int statusNameID = 0;
+        int statusOfferID = 1;
+        for (int i = 0; i<statuses[statusNameID].length;i++) {
+            if (status.equals(statuses[statusNameID][i].toString())){
+                customerTicketPrice = ticketPrice - (ticketPrice * ((int) statuses[statusOfferID][i])/100);
+            }
+        }
+    }
+
+
 
 }
