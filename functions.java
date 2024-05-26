@@ -51,10 +51,10 @@ public class functions {
         firstname = randomNames[maleFemaleFirstnameID][(int) (Math.random() * randomNames[maleFemaleFirstnameID].length-1)];
         if (maleFemaleFirstnameID == femaleFirstnameID){
             lastName = randomNames[femaleLastnameID][(int) (Math.random()* randomNames[femaleLastnameID].length-1)];
-        }if (maleFemaleFirstnameID == maleFirstnameID{
+        }if (maleFemaleFirstnameID == maleFirstnameID){
             lastName = randomNames[maleLastnameID][(int) (Math.random()* randomNames[maleLastnameID].length-1)];
         }
-        status = statuses[statusNameID][(int) Math.random() * statuses[statusNameID].length];
+        status = statuses[statusNameID][(int) Math.random() * statuses[statusNameID].length].toString();
     }
 
 }
