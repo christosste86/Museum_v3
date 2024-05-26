@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class functions {
+public class Functions {
     //customers
     private String firstname;
     private String lastName;
@@ -21,12 +21,6 @@ public class functions {
     private double ticketPrice = 1000;
     private Integer maxTicketsPerDay;
 
-    public void setDatesToStatisticTable() {
-        for (int i = 0; i < table[dateID].length; i++) {
-            table[dateID][i] = LocalDate.now().plusDays(i);
-        }
-    }
-
     //Table with firstname and last names for randomize users
     String [][] randomNames = {
             {"Eliška", "Tereza", "Adéla", "Anna", "Natálie"},
@@ -41,6 +35,11 @@ public class functions {
     private Object [][] statuses= {
             {"Invalid", "Student", "Child", "Pensioner", "Normal"},
             { 70,         30,         80,       60,       0}};
+
+    //create constructor
+
+    public Functions() {
+    }
 
     //create user
     public void randomUserAndStatus(){
@@ -58,6 +57,7 @@ public class functions {
         status = statuses[statusNameID][(int) Math.random() * statuses[statusNameID].length].toString();
     }
 
+    //Calculate customer finale price
     public void calculatePriceByOffer(){
         int statusNameID = 0;
         int statusOfferID = 1;
@@ -65,6 +65,13 @@ public class functions {
             if (status.equals(statuses[statusNameID][i].toString())){
                 customerTicketPrice = ticketPrice - (ticketPrice * ((int) statuses[statusOfferID][i])/100);
             }
+        }
+    }
+
+    //Set to table dates
+    public void setDatesToStatisticTable() {
+        for (int i = 0; i < table[dateID].length; i++) {
+            table[dateID][i] = LocalDate.now().plusDays(i);
         }
     }
 
